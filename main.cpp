@@ -1,38 +1,28 @@
 #include <stdio.h>
 
-template <typename Type>
-
-//ŠÖ”
-Type Min(Type a, Type b)
+int Recursive(int n,int m)
 {
-	if (a < b)
+	m--;
+	if (m <= 0)
 	{
-		return static_cast<Type>(a);
+		return(n);
 	}
-	else
-	{
-		return static_cast<Type>(b);
-	}
-	
-}
 
-template<>
-char Min<char>(char a, char b)
-{
-	return printf("”šˆÈŠO‚Í“ü—Í‚Å‚«‚Ü‚¹‚ñ\n");
+	return (n + Recursive(n * 2 - 50,m));
+
 }
 
 int main()
 {
+	int m = 5;
+	int n = 100;
 
-	printf("%d\n", Min<int>(100, 120));
+	int result;
 
-	printf("%f\n", Min<float>(130.5f, 150.5f));
+	result = Recursive(n,m);
 
-	printf("%lf\n", Min<double>(134.0f, 167.0f));
+	printf("%dŠÔ•ª‚Ì‹‹ = %d\n", m, result);
 	
-	Min<char>('a', 'b');
-
 
 	return 0;
 }
