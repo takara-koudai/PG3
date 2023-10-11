@@ -14,15 +14,19 @@ int Recursive(int n,int m)
 
 int main()
 {
+	int v = 0;
 	int m = 5;
 	int n = 100;
+	int b = 1072;
+
+	v = m * b;
 
 	int result;
 
 	result = Recursive(n,m);
 
-	printf("%dŠÔ•ª‚Ì‹‹ = %d\n", m, result);
-	
+	printf("%dŠÔ•ª‚ÌÄ‹A“I‚È’À‹à‘ÌŒn = %d\n", m, result);
+	printf("%dŠÔ•ª‚Ìˆê”Ê“I‚È’À‹à‘ÌŒn = %d\n", m,v);
 
 	return 0;
 }
