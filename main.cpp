@@ -33,27 +33,13 @@ int main()
 
 	setTimeout(p, time);
 
-	if (data == 0)
+	if (data == dice % 2)
 	{
-		if (dice % 2 == 0)
-		{
-			printf("³‰ğ\n");
-		}
-		else
-		{
-			printf("•s³‰ğ\n");	
-		}
+		printf("³‰ğ\n");
 	}
 	else
 	{
-		if (dice % 2 == 1)
-		{
-			printf("³‰ğ\n");
-		}
-		else
-		{
-			printf("•s³‰ğ\n");
-		}
+		printf("•s³‰ğ\n");
 	}
 
 	printf("³‰ğ‚Í %d ‚Å‚µ‚½", dice);
