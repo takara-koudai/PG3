@@ -24,8 +24,8 @@ int main()
 
 	srand((unsigned int)time(NULL));
 	
-	int n = 0;
-	int m = 3;
+	int data = 0;
+	int time = 3;
 	int dice;
 	dice = rand() % 6 + 1;
 
@@ -33,40 +33,17 @@ int main()
 	//p = DispResult;
 
 	printf("0‚©1‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
-	scanf_s("%d",&n);
+	scanf_s("%d",&data);
 
-	if (n == 0)
+	setTimeout(fx, time);
+
+	if (data == dice % 2)
 	{
-		if (dice % 2 == 0)
-		{
-			setTimeout(fx, m);
-
-			printf("³‰ğ\n");
-
-		}
-		else
-		{
-			setTimeout(fx, m);
-
-			printf("•s³‰ğ\n");
-			
-		}
+		printf("³‰ğ\n");
 	}
 	else
 	{
-		if (dice % 2 == 1)
-		{
-			setTimeout(fx, m);
-
-			printf("³‰ğ\n");
-		}
-		else
-		{
-			setTimeout(fx, m);
-
-			printf("•s³‰ğ\n");
-
-		}
+		printf("•s³‰ğ\n");
 	}
 
 	printf("³‰ğ‚Í %d ‚Å‚µ‚½", dice);
