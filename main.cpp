@@ -20,8 +20,8 @@ int main()
 {
 	srand((unsigned int)time(NULL));
 	
-	int n = 0;
-	int m = 3;
+	int data = 0;
+	int time = 3;
 	int dice;
 	dice = rand() % 6 + 1;
 
@@ -35,14 +35,14 @@ int main()
 	{
 		if (dice % 2 == 0)
 		{
-			setTimeout(p, m);
+			setTimeout(p, time);
 
 			printf("³‰ğ\n");
 
 		}
 		else
 		{
-			setTimeout(p, m);
+			//setTimeout(p, time);
 
 			printf("•s³‰ğ\n");
 			
@@ -52,13 +52,13 @@ int main()
 	{
 		if (dice % 2 == 1)
 		{
-			setTimeout(p, m);
+			//setTimeout(p, time);
 
 			printf("³‰ğ\n");
 		}
 		else
 		{
-			setTimeout(p, m);
+			//setTimeout(p, time);
 
 			printf("•s³‰ğ\n");
 
