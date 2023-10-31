@@ -29,39 +29,30 @@ int main()
 	p = DispResult;
 
 	printf("0‚©1‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
-	scanf_s("%d",&n);
+	scanf_s("%d",&data);
 
-	if (n == 0)
+	setTimeout(p, time);
+
+	if (data == 0)
 	{
 		if (dice % 2 == 0)
 		{
-			setTimeout(p, time);
-
 			printf("³‰ğ\n");
-
 		}
 		else
 		{
-			//setTimeout(p, time);
-
-			printf("•s³‰ğ\n");
-			
+			printf("•s³‰ğ\n");	
 		}
 	}
 	else
 	{
 		if (dice % 2 == 1)
 		{
-			//setTimeout(p, time);
-
 			printf("³‰ğ\n");
 		}
 		else
 		{
-			//setTimeout(p, time);
-
 			printf("•s³‰ğ\n");
-
 		}
 	}
 
