@@ -6,6 +6,8 @@ public:
 
 	void Update();
 
+	bool isGameLoop() { return GameLoop_; }
+
 private:
 
 	enum class Phase
@@ -26,6 +28,8 @@ private:
 	Phase phase_ = Phase::kApproach;
 
 	static void (Enemy::* FuncTable[])();
+
+	bool GameLoop_ = true;
 
 };
 
