@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-template<typename T>
+template<typename T,typename T2>
 
 class Number
 {
@@ -27,15 +27,21 @@ public:
 
 int main()
 {
+	Number<int, int> b1(11, 51);
+	Number<float, float> b2(11, 51);
+	Number<double, double> b3(11, 51);
+	Number<int, float> b4(11, 51);
+	Number<float, double> b5(11, 51);
+	Number<double, int> b6(11, 51);
 
-	Number<int> b1(1, 4);
-	Number<float> b2(2.5f, 5.0f);
-	Number<double> b3(2.4f, 3.3f);
-	
-	printf("%d\n", b1);
-	printf("%f\n", b2);
-	printf("%f\n", b3);
 
+	printf("int,int : %d\n", b1.Min(1, 15));
+	printf("float,float : %f\n", b2.Min(4.0, 12.0));
+	printf("double,double : %lf\n", b3.Min(2.0, 6.0));
+
+	printf("int, float : %d\n", b4.Min(5, 13.0));
+	printf("float, double : %f\n", b5.Min(23.0, 43.0));
+	printf("double, int : %lf\n", b6.Min(56.0, 33));
 	
 	return 0;
 }
