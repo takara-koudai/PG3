@@ -9,13 +9,13 @@ int main()
 	
 	list<const char*> list_
 	{
-		"“Œ‹","_“c","H—tŒ´","Œä“k’¬",
-		"éò’J","“ú•é—¢","“c’[","‹î",
-		"‘ƒŠ›","‘å’Ë","’r‘Ü","–Ú”’",
-		"‚“c”nê","V‘å‹v•Û","Vh","‘ãX–Ø",
-		"Œ´h","a’J","Œb”äõ","–Ú•",
-		"ŒÜ”½“c","‘åè","•iì","“c’¬",
-		"•l¼’¬","V‹´","—LŠy’¬"
+		"Tokyo","Kanda","Akihabara","Okachimachi",
+		"Uguisudani","Nippori","Tabata","Komagome",
+		"Sugamo","Otsuka","Ikebukuro","Mejiro",
+		"Takadanobaba","Shin-Okubo","Shinjuku","Yoyogi",
+		"Harajuku","Shibuya","Ebisu","Meguro",
+		"Gotanda","Osaki","Sinagawa","Tamachi",
+		"Hamamatsucho","Shimbasi","Yurakucho"
 	};
 	
 	printf("º˜a6”N‚Ì˜Hü}\n");
@@ -31,9 +31,9 @@ int main()
 
 	for (list<const char*>::iterator it_f = list_.begin(); it_f != list_.end(); ++it_f)
 	{
-		if (*it_f == "“c’[")
+		if (*it_f == "Tabata")
 		{
-			it_f = list_.insert(it_f, "¼“ú•é—¢");
+			it_f = list_.insert(it_f, "Nishi-Nippori");
 
 			++it_f;
 		}
@@ -50,9 +50,9 @@ int main()
 
 	for (list<const char*>::iterator it_f = list_.begin(); it_f != list_.end();++it_f)
 	{
-		if (*it_f == "“c’¬")
+		if (*it_f == "Tamachi")
 		{
-			it_f = list_.insert(it_f, "‚—ÖƒQ[ƒgƒEƒFƒC");
+			it_f = list_.insert(it_f, "Takanawa Gateway");
 
 			++it_f;
 		}
