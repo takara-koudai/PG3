@@ -1,45 +1,40 @@
 #include <stdio.h>
-#include <list>
 #include <iostream>
-#include <algorithm>
 #include <vector>
 #include <thread>
 
 using namespace std;
 
-void Add(int num) 
-{
-	num += 1;
-
-	printf("thread %d\n", num);
-};
-
-void Add2(int num) 
-{
-	num += 2;
-
-	printf("thread %d\n", num);
-};
-
-void Add3(int num) 
-{
-	num += 3;
-
-	printf("thread %d\n", num);
-};
-
-
 int main()
 {
-	int num = 0;
 
-	std::thread th1(Add, num);
-	std::thread th2(Add2, num);
-	std::thread th3(Add3, num);
+	const int Text = 100000;
+	string TextA(Text, 'a');
+	cout << Text << "文字コピーと移動を比較\n";
 
-	th1.join();
-	th2.join();
-	th3.join();
+	chrono::steady_clock::time_point now;
+	chrono::steady_clock::time_point end;
+
+	//コピー
+	now = chrono::steady_clock::now();
+	string CopyTextA = TextA;
+	end = chrono::steady_clock::now();
+
+	int copyResult = chrono::duration_cast<chrono::microseconds>(end - now).count();
+
+	cout << "コピーの場合" << "\n";
+	cout << copyResult << "\n";
+
+	//move
+	now = chrono::steady_clock::now();
+	string MoveTextA = move(TextA);
+	end = chrono::steady_clock::now();
+
+	int MoveResult = chrono::duration_cast<chrono::microseconds>(end - now).count();
+
+	cout << "移動の場合" << "\n";
+	cout << MoveResult << "\n";
+
 
 	return 0;
 }
